@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+/* grid struktur cycle page START */
+
+
+.item-a {
+    grid-area: header;
+    background: skyblue;
+}
+
+.item-b {
+    grid-area: main;
+    background: gold;
+}
+
+.item-d {
+    grid-area: footer;
+    background: lightseagreen;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.header-wrapper {
+    z-index: 2;
+    position: relative;
+}
+
+.header-menu-container {
+    justify-self: center;
+    align-self: center;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 100%;
+    grid-column-gap: 20px;
+    height: 100px;
+    transition: height .5s cubic-bezier(.19, 1, .22, 1);
+}
+
+
+ul,
+li,
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+
+    font-size: 16px;
+    color: black;
+
+}
+
+li {
+    margin-right: 15px;
+}
+
+
+
+.logo {
+    background-image: url(logo/kogalogo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    min-height: 50px;
+
+    align-self: center;
+    transition: transform .5s cubic-bezier(.19, 1, .22, 1);
+
+    justify-self: center;
+}
+
+#shopping-icons {
+
+    align-self: center;
+}
+
+
+/* grid struktur cycle page SLUT */
+
+.bike-list-container {
+    min-height: 100px;
+    width: 100%;
+
+
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.bike-angle-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-top: 20px;
+
+}
+
+.bike {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.angle {
+
+    background-color: blue;
+    background-image: url(ImageBikeBackground/miyata_pro.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 75px;
+    width: 100%;
+    margin: 2px;
+
+}
+
+/******** scrollboxens mål *******/
+/* for fullscreen 100vw, 100vh */
+#containerWindow {
+    -webkit-overflow-scrolling: touch;
+    /* Lets it scroll lazy - non-standard */
+    overflow: scroll;
+    width: 20vw;
+    height: 20vh;
+
+}
+
+
+#container {
+    position: relative;
+
+}
+
+.screen {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+/******** tilføj s *******/
+#screen1 {
+    background: #e8ff90;
+    color: white;
+}
+
+#screen2 {
+    background: #cebece;
+    color: white;
+}
+
+#screen3 {
+    background: maroon;
+    color: white;
+}

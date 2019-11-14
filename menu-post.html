@@ -4,69 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <title>index'et</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div>
-                <p>Menu:</p>
-                <ul>
-                    <a href="index.html">
-                        <li>forside</li>
-                    </a>
-                    <a href="menu-post.html">
-                        <li>Menu</li>
-                    </a>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1 class="overskrift">Cykler</h1>
-        <section class="liste"></section>
-    </main>
-    <template>
-        <article class="ret">
-            <h2 class="title"></h2>
-            <img src="" alt="" class="image">
-            <div class="beskrivelse">
-            </div>
-            <p class="pris">Pris: DKK</p>
+    <div>
+        <section id="cycle-page" class="container">
+            <header>
+                <nav>
+                    <div id="menu-desktop" class="header-wrapper item-a">
+                        <div class="wrapper">
+                            <div class="logo">
+                            </div>
+                            <div id="menu-list" class="header-menu-container">
+                                <ul>
+                                    <a href="index.html">
+                                        <li>Racer</li>
+                                    </a>
+                                    <a href="menu-post.html">
+                                        <li>El </li>
+                                    </a>
+                                    <a href="index.html">
+                                        <li>Trekking</li>
+                                    </a>
+                                    <a href="menu-post.html">
+                                        <li>Tis og guld</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div id="shopping-icons">
+
+                                <ul class="shopping">
+                                    <li>EUR</li>
+                                    <li>DKK</li>
+                                    <li>SEK</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main id="main" class=" item-b splashimge front-page-splas">
+                <div class="bike-slide-viewer">
+                    <div>your content</div>
+                    <div>your content</div>
+                    <div>your content</div>
+                </div>
+
+                <div class="bike-angle-container">
+                    <div class="angle"></div>
+                    <div class="angle"></div>
+                    <div class="angle"></div>
+                    <div class="angle"></div>
+                </div>
 
 
-        </article>
-    </template>
-    <script>
-        const url = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/Cykler";
-        let cykler = [];
-        document.addEventListener("DOMContentLoaded", start);
+                <section id="list-wrapper">
+                    <h1 class="overskrift"></h1>
+                    <section class="liste"></section>
+                    <template class="template">
+                        <article class="ret">
+                            <h2 class="title"></h2>
+                            <!-- <div class="image"></div>-->
+                            <img src="" alt="" class="image">
+                            <div class="beskrivelse">
+                            </div>
+                            <p class="pris">Pris: DKK</p>
+                        </article>
+                    </template>
 
-        function start() {
-            hentJson();
-        }
+                </section>
 
-        async function hentJson() {
-            const response = await fetch(url);
-            cykler = await response.json();
-            vis();
-        }
+                <!--  <section class="indhold">
+                    <h1 class="overskrift"></h1>
 
-        function vis() {
+                    <article class="side"></article>
+                </section>-->
 
-            const skabelon = document.querySelector("template");
-            const liste = document.querySelector(".liste");
+            </main>
+            <footer class="item-d"></footer>
+            <section id="right-sidebar" class="socials-container">
+                <p>sad</p>
+            </section>
+        </section>
+        <template>
+            <article class="ret">
+                <h2 class="title"></h2>
+                <div class="beskrivelse">
 
-            cykler.forEach(cykel => {
-                const klon = skabelon.cloneNode(true).content;
-                klon.querySelector(".title").textContent = cykel.title.rendered;
-                klon.querySelector(".beskrivelse").innerHTML = cykel.content.rendered;
-                klon.querySelector("img").src = cykel.billede.guid;
-                klon.querySelector("img").alt = "billede af" + cykel.billede.post_name;
-                liste.appendChild(klon);
-            });
-        }
-    </script>
+                </div>
+            </article>
+        </template>
+        <!--    <script>
+            const url = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/city";
+            let cykler = [];
+            document.addEventListener("DOMContentLoaded", start);
 
+            function start() {
+                hentJson();
+            }
+
+            async function hentJson() {
+                const response = await fetch(url);
+                cykler = await response.json();
+                vis();
+            }
+
+            function vis() {
+
+                const skabelon = document.querySelector("template");
+                const liste = document.querySelector(".liste");
+
+                cykler.forEach(cykel => {
+                    const klon = skabelon.cloneNode(true).content;
+                    klon.querySelector(".title").textContent = cykel.title.rendered;
+                    klon.querySelector(".beskrivelse").innerHTML = cykel.content.rendered;
+                    klon.querySelector("img").src = cykel.billede.guid;
+                    klon.querySelector("img").alt = "billede af" + cykel.billede.post_name;
+                    liste.appendChild(klon);
+                });
+            }
+        </script>-->
+        <!-- <script>
+     let side;
+     const url = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/pages/7";
+
+     document.addEventListener("DOMContentLoaded", start);
+
+     function start() {
+         hentJson();
+     }
+
+
+
+     async function hentJson() {
+         const response = await fetch(url);
+         side = await response.json();
+
+
+         vis();
+     }
+
+
+
+
+     function vis() {
+         document.querySelector(".overskrift").textContent = side.title.rendered;
+         document.querySelector(".side").innerHTML = side.content.rendered;
+
+     }
+ </script>-->
+    </div>
+    <script src="script.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body></html>

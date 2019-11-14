@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Mouse And Touch And Pointers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        html,
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        /******** scrollboxens mål *******/
+        /* for fullscreen 100vw, 100vh */
+        #containerWindow {
+            -webkit-overflow-scrolling: touch;
+            /* Lets it scroll lazy - non-standard */
+            overflow: scroll;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        .screen {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30vw;
+        }
+
+        /******** tilføj screens *******/
+        #screen1 {
+            background: #e8ff90;
+            color: white;
+        }
+
+        #screen2 {
+            background: #cebece;
+            color: white;
+        }
+
+        #screen3 {
+            background: maroon;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="containerWindow">
+        <div id="container">
+            <div id="screen1" class="screen">
+                <p> 1 </p>
+            </div>
+            <div id="screen2" class="screen">
+                <p> 2 </p>
+            </div>
+            <div id="screen3" class="screen">
+                <p> 3 </p>
+            </div>
+        </div>
+    </section>
+</body></html>
+<script>
+window.addEventListener("load", init);
+
+var dragging = false;
+var RAF; // big machine
+var origW;
+var origH;
+var startX = 0;
+var startY = 0;
+var lastX = 0;
+var lastY = 0;
+var difX = 0;
+var difY = 0;
+var X = 0;
+var Y = 0;
+var containerWindow;
+var container;
+var containerW;
+var containerH;
+var screens = [];
+var curScreen;
+var nextScreen;
+var screenW;
+var screenH;
+
+function init() {
+screens = document.querySelectorAll('.screen');
+containerWindow = document.querySelector('#containerWindow');
+container = document.querySelector('#container');
+
+setupScreens();
+
+// listeners
+//container.addEventListener('touchstart', onTouchStart);
+//container.addEventListener('mousedown', onMouseDown);
+}
+
+function setupScreens() {
+screenW = containerWindow.getBoundingClientRect().width;
+screenH = containerWindow.getBoundingClientRect().height;
+    console.log(screens);
+
+var i = 0;
+for (i = 0; i < screens.length; i++) {
+var screen = screens[i];
+screen.style.left = screenW * i + "px";
+screen.style.width = screenW + "px";
+screen.style.height = screenH + "px";
+}
+}
+
+
+/*
+* Events
+*/
+/*
+function onMouseDown(e) {
+e.preventDefault();
+document.addEventListener('mouseup', onMouseUp);
+document.addEventListener('mousemove', onMouseMove);
+handleDragStart(event.clientX, event.clientY);
+}
+
+function onMouseMove(e) {
+if (dragging) handleDragging(e.clientX, e.clientY);
+}
+
+function onMouseUp(e) {
+document.removeEventListener('mouseup', onMouseUp);
+document.removeEventListener('mousemove', onMouseMove);
+e.preventDefault();
+handleDragStop();
+}
+
+function onTouchStart(e) {
+e.preventDefault();
+if (e.touches.length === 1) {
+handleDragStart(e.touches[0].clientX, e.touches[0].clientY);
+document.addEventListener('touchmove', onTouchMove);
+document.addEventListener('touchend', onTouchEnd);
+document.addEventListener('touchcancel', onTouchEnd);
+}
+}
+
+function onTouchMove(event) {
+e.preventDefault();
+if (e.touches.length === 1) {
+handleDragging(e.touches[0].clientX, e.touches[0].clientY);
+}
+}
+
+function onTouchEnd(e) {
+e.preventDefault();
+if (e.touches.length === 0) {
+handleDragStop();
+document.removeEventListener('touchmove', onTouchMove);
+document.removeEventListener('touchend', onTouchEnd);
+document.removeEventListener('touchcancel', onTouchEnd);
+}
+}
+
+function handleDragStart(x, y) {
+dragging = true;
+startX = lastX = x;
+startY = lastY = y;
+raf();
+}
+
+function handleDragging(x, y) {
+if (dragging) {
+difX = x - lastX;
+difY = y - lastY;
+lastX = x;
+lastY = y;
+}
+}
+
+function handleDragStop() {
+if (dragging) {}
+dragging = false;
+difX = 0;
+difY = 0;
+}
+
+function raf() {
+X = difX;
+Y = difY;
+plateWidth += X * 0.8;
+plateHeight += Y * 0.8;
+plate.style.width = plateWidth + "px";
+plate.style.height = plateHeight + "px";
+difX = 0;
+difY = 0;
+RAF = requestAnimationFrame(raf);
+}
+*/
+
+</script>
