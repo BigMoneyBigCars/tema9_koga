@@ -1,148 +1,651 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>index'et</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="utf-8">
+    <title>KOGA</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!-- scripts
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <script src="js/pace.min.js"></script>
+
+
+
+
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="iconer/13835-koga-logo-2.png" type="image/x-icon">
+    <link rel="icon" href="iconer/13835-koga-logo-2.png" type="image/x-icon">
+
 </head>
 
-<body>
-    <div>
-        <section id="cycle-page" class="">
-            <header>
-                <div class="logo">
-                </div>
-                <div id="menu-sidebar">
-                    <nav>
-                        <div id="menu-list">
-                            <p>Menu:</p>
-                            <ul>
-                                <a href="index.html">
-                                    <li>Racer</li>
-                                </a>
-                                <a href="menu-post.html">
-                                    <li>El </li>
-                                </a>
-                                <a href="index.html">
-                                    <li>Trekking</li>
-                                </a>
-                                <a href="menu-post.html">
-                                    <li>Tis og guld</li>
-                                </a>
+<body id="top">
 
-                            </ul>
+    <!-- header
+   ================================================== -->
+    <header>
+
+        <div class="header-logo">
+            <a href="index.html">Koga</a>
+        </div>
+
+        <a id="header-menu-trigger" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+        <nav id="menu-nav-wrap">
+
+            <a href="#0" class="close-button" title="close"><span>Luk</span></a>
+
+            <h3>Menu</h3>
+
+            <ul class="nav-list">
+                <li class="current"><a class="smoothscroll" href="#home" title="">Kogacenter</a></li>
+                <li><a class="smoothscroll" href="#about" title="">Om Koga</a></li>
+                <li><a class="smoothscroll" href="#services" title="">Cykler</a></li>
+                <li><a class="smoothscroll" href="#contact" title="">Kontakt</a></li>
+            </ul>
+
+
+
+            <ul class="header-social-list">
+                <li>
+                    <a href="https://www.facebook.com/kogacenter" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/kogabikes/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </li>
+
+            </ul>
+
+        </nav> <!-- end #menu-nav-wrap -->
+
+    </header> <!-- end header -->
+
+
+    <!-- home
+   ================================================== -->
+    <section id="home">
+
+        <div class="overlay">
+            <!-- The video -->
+            <section id="videocontent">
+                <video autoplay muted loop id="myVideo">
+                    <source src="splashfilm.mp4" type="video/mp4">
+                </video></section>
+
+
+        </div>
+
+        <div class="home-content-table">
+            <div class="home-content-tablecell">
+                <div class="row">
+                    <div class="col-twelve">
+
+
+
+                        <h3 class="animate-intro">kogacenter</h3>
+
+
+                        <div class="more animate-intro">
+
                         </div>
-                    </nav>
+
+
+                    </div> <!-- end col-twelve -->
+                </div> <!-- end row -->
+            </div> <!-- end home-content-tablecell -->
+        </div> <!-- end home-content-table -->
+
+        <ul class="home-social-list">
+            <li class="animate-intro">
+                <a href="https://www.facebook.com/kogacenter" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li class="animate-intro">
+                <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="animate-intro">
+                <a href="https://www.instagram.com/kogabikes/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+
+        </ul> <!-- end home-social-list -->
+
+    </section> <!-- end home -->
+
+
+    <!-- about
+   ================================================== -->
+    <section id="about">
+
+        <div class="row about-wrap">
+            <div class="col-full">
+
+                <div class="about-profile-bg"></div>
+
+                <div class="intro">
+                    <h3 class="animate-this">Om Koga</h3>
+                    <p class="lead animate-this"><span>Kogacenter</span> er den største samt eneste forhandler af KOGA Cykler, det er vi stolte af. Vores kunder er altid i fokus, og er grunden til vi stræber efter at være din foretrukne cykelhandler. Kom ned og besøg os i butikken!</p>
+                    <div class="more animate-intro">
+                        <a class="smoothscroll button stroke findbutik" href="#contact">
+                            Find butik
+                        </a>
+                    </div>
                 </div>
-            </header>
-            <main id="main" class="splashimage front-page-splash">
-                <section id="list-wrapper">
-                    <h1 class="overskrift"></h1>
-                    <section class="liste"></section>
-                    <template class="template">
-                        <article class="ret">
-                            <h2 class="title"></h2>
-                            <!-- <div class="image"></div>-->
-                            <img src="" alt="" class="image">
-                            <div class="beskrivelse">
+
+            </div> <!-- end col-full  -->
+        </div> <!-- end about-wrap  -->
+
+        <div class="scrolldown2">
+            <a href="#services" class="scroll-icon2 smoothscroll">
+                Scroll ned
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </section> <!-- end about -->
+
+
+    <!-- about
+   ================================================== -->
+    <section id="services">
+
+        <div class="overlay"></div>
+        <div class="gradient-overlay"></div>
+
+        <div class="row narrow section-intro with-bottom-sep animate-this">
+            <div class="col-full">
+
+                <h3>Historien om</h3>
+                <h1>Koga</h1>
+
+                <p class="lead">Siden 1974 har folk mere tid til deres fritidsaktiviteter, da arbejdsugen forkortes. Koga, som en nystiftet cykelproducent, tilpasser sig straks denne tendens. Andries Gaastra, tidligere salgschef hos Batavus, grundlægger Koga B.V., når hans far Gerrit sælger Batavus. Han fusionerer de første par bogstaver i sin kone Marion Kowalliks efternavn med bogstaverne med sit eget efternavn til mærkenavnet Koga.
+                </p>
+
+            </div> <!-- end col-full -->
+        </div> <!-- end row -->
+
+        <div class="row services-content">
+
+            <div class="services-list block-1-2 block-tab-full group">
+
+                <div class="bgrid service-item animate-this">
+
+
+                    <img src="iconer/kogaMand_white.svg" alt="kogasvg" style="width: 20%">
+
+                    <div class="service-content">
+                        <h3 class="h05">branding</h3>
+
+                        <p>KOGA er en hollandsk cykelproducent med base i Heerenveen, Holland. Virksomheden er kendt for sit langvarige partnerskab med den japanske rammeproducent Miyata, der producerer cykler og sponsorerer raceteam under mærkenavnet Koga Miyata. Fra maj 2010 sluttede partnerskabet, og virksomheden begyndte at fremstille cykler under KOGA-mærket.
+                        </p>
+                    </div>
+
+                </div> <!-- end bgrid -->
+
+                <div class="bgrid service-item animate-this">
+
+
+                    <img src="iconer/check_white.svg" alt="kogasvg" style="width: 20%">
+
+                    <div class="service-content">
+                        <h3 class="h05">Filosofi</h3>
+
+                        <p>Koga - en filosofi
+                            Cykling er vores passion- Koga kunder, forhandlere og medarbejdere over hele verden deler en fælles passion: Nemlig cykling, hvor som helst og når som helst, vores produkter er skræddersyet til vores kunder: et perfekt samspil.
+                            Vores overbevisning: En gang Koga, altid Koga.
+                        </p>
+                    </div>
+
+                </div> <!-- end bgrid -->
+
+                <div class="bgrid service-item animate-this">
+
+
+                    <img src="iconer/world_white.png" alt="kogasvg" style="width: 20%">
+
+                    <div class="service-content">
+                        <h3 class="h05">Leverendører &amp; partnere</h3>
+
+                        <p>Innovation er grundlaget for vores succes. Koga er velkendt i, og anerkendt af branchen for sin stærke innovation. Vi har opnået dette ry sammen med top-klasse leverandører og partnere over hele verden. Lige siden grundlæggelsen har Koga været konstant stræben efter optimering: ved hjælp af nye materialer og komponenter samt udvikle andre trendsættende nyskabelser.
+
+                        </p>
+                    </div>
+
+                </div> <!-- end bgrid -->
+
+                <div class="bgrid service-item animate-this">
+
+
+                    <img src="iconer/service_white.svg" alt="kogasvg" style="width: 20%">
+
+                    <div class="service-content">
+                        <h3 class="h05">Professionelt Håndværk</h3>
+
+                        <p>Solidt håndværk er en værdi, vi bygger på. Grundlaget for vores succes i mere end tredive år: Koga unikke produktionsmetode. Hver Koga er bygget i hånden af en enkelt special uddannet mekaniker. Af denne grund, har vi uddannet vores teknikere på vores eget træningsanlæg. Sommetider er vores nyskabelser klart synlige, sommetider skjulte - men altid skræddersyet til dine specifikke behov og krav.
+                        </p>
+                    </div>
+
+                </div> <!-- end bgrid -->
+
+            </div> <!-- end services-list -->
+
+        </div> <!-- end services-content -->
+        <div class="scrolldown">
+            <a href="#portfolio" class="scroll-icon smoothscroll">
+                Scroll ned
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </section> <!-- end services -->
+
+
+    <!-- cykler
+   ================================================== -->
+    <section id="portfolio">
+
+        <div class="intro-wrap">
+
+            <div class="row narrow section-intro with-bottom-sep animate-this">
+                <div class="col-twelve">
+                    <h3>Koga cykler</h3>
+                    <h1>Se vores udvalg af cykler.</h1>
+
+                    <p class="lead"> Hos kogacenter integrerer vi komponenter og dele hvor det giver mening. Dette skaber et rent udtryk, hvor styling og farvematching har stor betydning. Således, at koga designet rummer det unikke og eksklusive. </p>
+
+                    <!--LASSE KODE START-->
+                    <!--LASSE KODE START-->
+                    <!--LASSE KODE START-->
+
+                    <div class="cycle-container">
+                        <div class="slider-nav" id="wrapper">
+                        </div>
+
+                        <div class="slider-for"></div>
+
+                        <p>henrik</p>
+                        <template class="test-template">
+                            <div class="box1">
+
+                                <img src="" alt="">
+                                <div class="title"></div>
                             </div>
-                            <p class="pris">Pris: DKK</p>
-                        </article>
-                    </template>
-                    <!-- <div id="bike-list">
-                        <div class="top-container">
-                            <div class="box"> </div>
-                            <div class="box"> </div>
-                            <div class="box"> </div>
+                        </template>
+
+                        <div id="bike-specifications">
+
                         </div>
-                        <div id="single-view"></div>
-                        <div class="bottom-container">
-                            <div class="box"> </div>
-                            <div class="box"> </div>
-                            <div class="box"> </div>
+
+                        <template class="bike-specifications">
+                            <div class="b-specs-top">
+                                <div>
+                                    <h3>Frame Sizes</h3>
+                                    <p class="frameSize"> </p>
+                                </div>
+                                <div>
+                                    <h3>Color Combinations</h3>
+                                    <p class="colorCombinations"></p>
+                                </div>
+                                <div>
+                                    <h3>weight</h3>
+                                    <p class="weight"></p>
+                                </div>
+
+
+                                <div class="b-price">
+                                    <h3>Pris</h3>
+                                    <p class="price"></p>
+                                </div>
+                            </div>
+
+
+                            <div class="specsBenefits-container">
+                                <div class="specifications-container">
+
+
+                                </div>
+                                <div class="benefits-container">
+                                    <div class="benefits1"></div>
+                                    <div class="benefits2"></div>
+                                    <div class="benefits3"></div>
+                                </div>
+
+                            </div>
+                        </template>
+                    </div>
+
+
+
+
+
+                    <!--LASSE KODE SLUT-->
+                    <!--LASSE KODE SLUT-->
+                    <!--LASSE KODE SLUT-->
+
+
+
+
+
+                </div> <!-- end row section-intro -->
+
+            </div> <!-- end intro-wrap -->
+        </div>
+
+        <div class="scrolldown2">
+            <a href="#testimonials" class="scroll-icon smoothscroll">
+                Scroll ned
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+
+
+
+
+    <!-- Testimonials Section
+   ================================================== -->
+    <section id="testimonials">
+
+        <div class="row">
+            <div class="col-twelve">
+                <h2 class="animate-this">Hvad siger vores kunder?</h2>
+            </div>
+        </div>
+
+        <div class="row flex-container">
+
+            <div id="testimonial-slider" class="flex-slider animate-this">
+
+                <ul class="slides">
+
+                    <li>
+                        <p>
+                            Det arbejde der bliver lagt i servicen i kogacenter butikken på Frederiksberg, er nærværende &amp; trygt. Der bliver ikke lagt skjul på hvilket engagement der bliver lagt for dagen. Man føler sig velkommen, i fokus og ikke desto mindre værdsat. Èn gang Koga - Altid Koga!
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="images/avatars/user-02.jpg" alt="Author image">
+                            <div class="author-info">
+                                Mikkel Andersen
+                                <span class="position">Bankrådgiver, Lån&amp;Spar Bank.</span>
+                            </div>
                         </div>
-                    </div>-->
-                </section>
+                    </li> <!-- end slide -->
 
-                <!--  <section class="indhold">
-                    <h1 class="overskrift"></h1>
+                    <li>
+                        <p>
+                            Nu har jeg været Koga kunde i over 15 år. Jeg har aldrig oplevet bedre kundeservice. Jeg har som kunde hos Kogacenter, livsgaranti på min cykel og det skaber tryghed. At jeg altid kan komme ned i butikken hvis jeg mangler ekspertise, er uundværlig. Hos Kogacenter ved jeg at jeg får hvad jeg betaler for, intet mindre.
+                        </p>
 
-                    <article class="side"></article>
-                </section>-->
+                        <div class="testimonial-author">
+                            <img src="images/avatars/user-03.jpg" alt="Author image">
+                            <div class="author-info">
+                                Kasper Linn Marcussen
+                                <span>CEO, COMABUSINESS.</span>
+                            </div>
+                        </div>
+                    </li> <!-- end slide -->
 
-            </main>
-            <section id="right-sidebar" class="socials-container">
-                <p>sad</p>
-            </section>
-        </section>
-        <template>
-            <article class="ret">
-                <h2 class="title"></h2>
-                <div class="beskrivelse">
+                </ul> <!-- end slides -->
 
+            </div> <!-- end testimonial-slider -->
+
+        </div> <!-- end flex-container -->
+
+        <div class="scrolldown">
+            <a href="#about" class="scroll-icon smoothscroll">
+                Scroll ned
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </section> <!-- end testimonials -->
+
+
+    <!-- stats
+   ================================================== -->
+
+
+
+    <!-- contact
+   ================================================== -->
+    <section id="contact">
+
+        <div class="overlay"></div>
+
+        <div class="row narrow section-intro with-bottom-sep animate-this">
+            <div class="col-twelve">
+                <h3>Kontakt</h3>
+                <h1>Kom ned i butikken.</h1>
+
+                <p class="lead">Danmarks førende forhandler af Koga cykler. Vores personale er speciallister i Koga, og hos os kan du få de bedste råd og en kompetent vejledning.</p>
+            </div>
+        </div> <!-- end section-intro -->
+
+        <div class="row contact-content">
+
+            <div class="col-seven tab-full animate-this">
+
+                <h5>Skriv en mail</h5>
+
+                <!-- form -->
+                <form name="contactForm" id="contactForm" method="post">
+
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Navn" value="" minlength="2" required="">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-six tab-full">
+                            <div class="form-field">
+                                <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+                            </div>
+                        </div>
+                        <div class="col-six tab-full">
+                            <div class="form-field">
+                                <input name="contactSubject" type="text" id="contactSubject" placeholder="Emne" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Besked" rows="10" cols="50" required=""></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <button class="submitform">Send</button>
+
+                        <div id="submit-loader">
+                            <div class="text-loader">Sender...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form> <!-- end form -->
+
+                <!-- contact-warning -->
+                <div id="message-warning"></div>
+
+                <!-- contact-success -->
+                <div id="message-success">
+                    <i class="fa fa-check"></i>Din besked er blevet sendt, mange tak!<br>
                 </div>
-            </article>
-        </template>
-        <!--   <script>
-            const url = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/city";
-            let cykler = [];
-            document.addEventListener("DOMContentLoaded", start);
 
-            function start() {
-                hentJson();
-            }
+            </div> <!-- end col-seven -->
 
-            async function hentJson() {
-                const response = await fetch(url);
-                cykler = await response.json();
-                vis();
-            }
+            <div class="col-four tab-full contact-info end animate-this">
 
-            function vis() {
+                <h5>Kontakt Information</h5>
 
-                const skabelon = document.querySelector("template");
-                const liste = document.querySelector(".liste");
+                <div class="cinfo">
+                    <h6>Her finder du os</h6>
+                    <p>
+                        Peter Bangs Vej 18<br>
+                        2000 Frederiksberg<br>
+                        København, Danmark
+                    </p>
+                </div> <!-- end cinfo -->
 
-                cykler.forEach(cykel => {
-                    const klon = skabelon.cloneNode(true).content;
-                    klon.querySelector(".title").textContent = cykel.title.rendered;
-                    klon.querySelector(".beskrivelse").innerHTML = cykel.content.rendered;
-                    klon.querySelector("img").src = cykel.billede.guid;
-                    klon.querySelector("img").alt = "billede af" + cykel.billede.post_name;
-                    liste.appendChild(klon);
-                });
-            }
-        </script>-->
-        <!-- <script>
-     let side;
-     const url = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/pages/7";
+                <div class="cinfo">
+                    <h6>E-mail</h6>
+                    <p>
+                        info@kogacenter.dk<br>
 
-     document.addEventListener("DOMContentLoaded", start);
+                    </p>
+                </div> <!-- end cinfo -->
 
-     function start() {
-         hentJson();
-     }
+                <div class="cinfo">
+                    <h6>Ring til butikken</h6>
+                    <p>
+                        Phone: (+45) 38 86 43 25
+                    </p>
+                </div>
+
+            </div> <!-- end cinfo -->
+
+        </div> <!-- end row contact-content -->
 
 
-
-     async function hentJson() {
-         const response = await fetch(url);
-         side = await response.json();
+    </section> <!-- end contact -->
 
 
-         vis();
-     }
+    <!-- footer
+   ================================================== -->
+    <footer>
+        <div class="footer-main">
 
+            <div class="row">
 
+                <div class="col-five tab-full footer-about">
 
+                    <h4 class="h05">Koga.</h4>
 
-     function vis() {
-         document.querySelector(".overskrift").textContent = side.title.rendered;
-         document.querySelector(".side").innerHTML = side.content.rendered;
+                    <p>Tanken er at venner og gode kunder er "venner" med os på facebook, hvor vi vil fortælle om nyheder, gode tilbud, ture, events og andre oplevelser.
+                        Så tryk "like" på vores side og se vores facebook side
+                        Du kan læse mere på <a href="https://www.facebook.com/groups/302644196440482/" target="_blank" class="kogaklub">Koga Klub Danmark</a></p>
 
-     }
- </script>-->
+                </div> <!-- end footer-about -->
+
+                <div class="col-three tab-full footer-social">
+
+                    <h4 class="h05">Følg os.</h4>
+
+                    <ul class="list-links">
+                        <li><a href="https://www.facebook.com/kogacenter" target="_blank">Facebook</a></li>
+                        <li><a href="www.twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/kogabikes/" target="_blank">Instagram</a></li>
+
+                    </ul>
+
+                </div> <!-- end footer-social -->
+
+                <div class="col-four tab-full footer-subscribe end">
+
+                    <h4 class="h05">Nyhedsbrev</h4>
+
+                    <p>Tilmeld dig vores Kogacenter nyhedsbrev, og få aktuelle opdateringer på vores produkter</p>
+
+                    <div class="subscribe-form">
+
+                        <form id="mc-form" class="group" novalidate="true">
+
+                            <input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="Tilmeld e-mail" required="">
+
+                            <!-- <input type="submit" name="subscribe" > -->
+                            <button><i class="icon-mail"></i></button>
+
+                            <label for="mc-email" class="subscribe-message"></label>
+
+                        </form>
+
+                    </div>
+
+                </div> <!-- end footer-subscribe -->
+
+            </div> <!-- end row -->
+
+        </div> <!-- end footer-main -->
+
+        <div class="footer-bottom">
+
+            <div class="row">
+
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span>© Copyright KOGA 2019.</span>
+                        <span>Design af <a href="">Gruppe15</a></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+        <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+
+    <div id="preloader">
+        <div id="loader"></div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Java Script
+   ================================================== -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script src="js/main.js"></script>
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+
+        // Get the button
+        var btn = document.getElementById("myBtn");
+
+        // Pause and play the video, and change the button text
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+
 </body></html>
