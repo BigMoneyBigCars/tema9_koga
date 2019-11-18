@@ -290,7 +290,9 @@ video {
     min-width: 80%;
     min-height: 100px;
     pointer-events: none;
-    top: 100px;
+    width: 100vw;
+    margin-top: 60px;
+
 }
 
 /* Add some content at the bottom of the video/page */

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $("#menu-list a").on("click", hentCykel);
+    $(".cycle-list p").on("click", hentCykel);
 
     function hentCykel(event) {
         switch ($(event.currentTarget).data('type')) {
@@ -19,13 +19,14 @@ $(document).ready(function () {
         }
     }
 
-
     const cityCykler = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/city";
     const racerCykler = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/racer?per_page=7";
     const trekkingCykler = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/trekking";
     const elCykler = "https://www.mostvalue.dk/Koga/wordpress/wp-json/wp/v2/el";
 
     let cykler = [];
+
+    var boxes = ".box1";
 
 
     hentJson(racerCykler);
@@ -37,45 +38,53 @@ $(document).ready(function () {
     }
 
     function vis() {
-        $('.slick-slider').slick('unslick');
-        $('.slider-nav').empty();
+        document.querySelector(".luk").addEventListener('click', noDisplayBike);
+        $('#wrapper').empty();
         const skabelon = document.querySelector(".test-template");
         const liste = document.querySelector("#wrapper");
-        cykler.forEach(cykel => {
+        cykler.forEach((cykel, index) => {
             const klon = skabelon.cloneNode(true).content;
+
+
             klon.querySelector("img").src = cykel.billede.guid;
             klon.querySelector("img").alt = "slider image";
             klon.querySelector(".title").innerHTML = cykel.title.rendered;
+            klon.querySelector(".priceGrid").textContent = "Pris " + cykel.pris + " ,-";
+
+            console.log(index);
+            klon.querySelector(".box1").addEventListener('click', function () {
+                showBike(cykler[index]);
+                console.log(index);
+                document.querySelector(".bikePopUp").style.display = "block";
+                document.querySelector("body").classList.add("noscroll");
+                document.querySelector(".bikeImg img").src = cykel.billede.guid;
+                document.querySelector(".bikeTitle").textContent = cykel.title.rendered;
+                /*    document.querySelector(".bikePrice").textContent = "Pris " + cykel.pris + " ,-";*/
+                document.querySelector(".price").textContent = cykel.pris + " ,-";
+                document.querySelector(".frameSize").innerHTML = cykel.framesize;
+                document.querySelector(".weight").innerHTML = cykel.weight;
+
+                document.querySelector(".colorCombinations").innerHTML = cykel.colorcombination;
+
+
+
+            })
+
+
             liste.appendChild(klon);
-        });
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-
-        const slider = $('.slider-nav');
-
-        slider.on('reInit', function (event, slick) {
-            showBike(cykler[0]);
-        });
-        slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            showBike(cykler[currentSlide]);
-            console.log(currentSlide);
-        });
-
-        slider.slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: true,
-            centerMode: true,
-            focusOnSelect: true,
-            variableWidth: false,
-            arrows: true,
 
         });
+
+
+
+
+        /*klon.querySelector(".luk").addEventListener('click', noDisplayBike());*/
+    }
+
+
+    function noDisplayBike() {
+        document.querySelector(".bikePopUp").style.display = "none";
+        document.querySelector("body").classList.remove("noscroll");
 
     }
 
@@ -89,14 +98,15 @@ $(document).ready(function () {
         $(listeSpecs).empty();
         const klon = skabelonSpecs.cloneNode(true).content;
         console.log(klon);
-        klon.querySelector(".price").textContent = ": " + data.pris + " ,-";
-        klon.querySelector(".frameSize").innerHTML = data.framesize;
-        klon.querySelector(".weight").innerHTML = data.weight;
+        /*    klon.querySelector(".price").textContent = data.pris + " ,-";
+            klon.querySelector(".frameSize").innerHTML = data.framesize;
+            klon.querySelector(".weight").innerHTML = data.weight;
 
-        klon.querySelector(".colorCombinations").innerHTML = data.colorcombination;
-        klon.querySelector(".benefits1").innerHTML = data.benefits1;
-        klon.querySelector(".benefits2").innerHTML = data.benefits2;
-        klon.querySelector(".benefits3").innerHTML = data.benefits3;
+            klon.querySelector(".colorCombinations").innerHTML = data.colorcombination;*/
+        klon.querySelector(".benefits1").textContent = data.benefits1;
+
+        klon.querySelector(".benefits2").textContent = data.benefits2;
+        klon.querySelector(".benefits3").textContent = data.benefits3;
 
 
         if (data.front_fork_sort) {
